@@ -1,0 +1,12 @@
+.groups {
+    min-height: calc(100vh - 7em);
+    width: 100%;
+    position: relative;
+    height: 100%;
+    padding: 1.5em;
+
+    h3 {
+        font-size: 2.5em;
+        margin: 0 0 1em;
+    }
+}

@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    --white: #fff;
+    --black: #000;
+    --purpur: #6a68ff;
+    --blueLignt: #5db2ee;
+    --blueDarken: #2a3554;
+    --blue: #313c5d;
+    --pink: #f06391;
+    --pinkDaeken: #e35886;
+    --text: #e0e2e7;
+
+    --gap: 7em;
+    --max-width: 992px;
+
+    background: var(--white);
+    color: var(--white);
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    user-select: none;
+}
+
+.button {
+    border: 0;
+    cursor: pointer;
+}

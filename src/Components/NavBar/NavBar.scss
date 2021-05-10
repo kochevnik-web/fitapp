@@ -1,0 +1,24 @@
+.navbar {
+    align-items: center;
+    background: var(--blueDarken);
+    display: flex;
+    justify-content: flex-end;
+    max-width: var(--max-width);
+    min-height: var(--gap);
+    padding: 1em 1.5em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
+    .adding {
+        cursor: pointer;
+        height: 3.8em;
+        width: 3.8em;
+
+        svg {
+            fill: var(--purpur);
+            width: 100%;
+        }
+    }
+}
