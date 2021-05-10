@@ -1,7 +1,9 @@
 .list-item {
-    padding: 1.5em 0;
     border-bottom: 0.1em solid var(--blueDarken);
     cursor: pointer;
+    padding: 1.5em 0;
+    overflow: hidden;
+    position: relative;
 
     span {
         font-size: 1.8em;
