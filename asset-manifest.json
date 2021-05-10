@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/fitapp/static/css/main.62dee938.chunk.css",
-    "main.js": "/fitapp/static/js/main.814e50c3.chunk.js",
-    "main.js.map": "/fitapp/static/js/main.814e50c3.chunk.js.map",
+    "main.css": "/fitapp/static/css/main.87ee44ca.chunk.css",
+    "main.js": "/fitapp/static/js/main.68e1851b.chunk.js",
+    "main.js.map": "/fitapp/static/js/main.68e1851b.chunk.js.map",
     "runtime-main.js": "/fitapp/static/js/runtime-main.a46c1b24.js",
     "runtime-main.js.map": "/fitapp/static/js/runtime-main.a46c1b24.js.map",
-    "static/js/2.849bf8df.chunk.js": "/fitapp/static/js/2.849bf8df.chunk.js",
-    "static/js/2.849bf8df.chunk.js.map": "/fitapp/static/js/2.849bf8df.chunk.js.map",
+    "static/js/2.8aa711e9.chunk.js": "/fitapp/static/js/2.8aa711e9.chunk.js",
+    "static/js/2.8aa711e9.chunk.js.map": "/fitapp/static/js/2.8aa711e9.chunk.js.map",
     "index.html": "/fitapp/index.html",
-    "static/css/main.62dee938.chunk.css.map": "/fitapp/static/css/main.62dee938.chunk.css.map",
-    "static/js/2.849bf8df.chunk.js.LICENSE.txt": "/fitapp/static/js/2.849bf8df.chunk.js.LICENSE.txt"
+    "static/css/main.87ee44ca.chunk.css.map": "/fitapp/static/css/main.87ee44ca.chunk.css.map",
+    "static/js/2.8aa711e9.chunk.js.LICENSE.txt": "/fitapp/static/js/2.8aa711e9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a46c1b24.js",
-    "static/js/2.849bf8df.chunk.js",
-    "static/css/main.62dee938.chunk.css",
-    "static/js/main.814e50c3.chunk.js"
+    "static/js/2.8aa711e9.chunk.js",
+    "static/css/main.87ee44ca.chunk.css",
+    "static/js/main.68e1851b.chunk.js"
   ]
 }
