@@ -1,4 +1,5 @@
 import React, {useContext} from 'react';
+import firebase from 'firebase';
 
 import {db} from '../../base';
 import {Context} from '../../context';
@@ -13,7 +14,8 @@ export default function NavBar() {
         let text = prompt("Укажите имя группы:");
         if(text){
             db.collection(screen).add({
-                name: text
+                name: text,
+                createAt: firebase.firestore.FieldValue.serverTimestamp()
             })
         }
     }

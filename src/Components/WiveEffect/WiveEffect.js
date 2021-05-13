@@ -12,6 +12,7 @@ function WiveClick({cords}) {
                 setStatus(false);
             }, 1800);
         }
+    // eslint-disable-next-line
     }, []);
 
     return (
@@ -31,7 +32,6 @@ export default function WiveEffect({children}) {
 
     useEffect(() =>{
         var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        console.log(scrollTop);
         setTop(refElem.current?.getBoundingClientRect().top + scrollTop);
         setLeft(refElem.current?.getBoundingClientRect().left);
     }, []);
