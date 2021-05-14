@@ -9,7 +9,6 @@ export default function ContextProvider({ children }) {
     }
     const [size, setSize] = useState(getSize());
     const [user, setUser] = useState(getSize());
-    const [screen, setScreen] = useState('groups');
 
     useEffect(()=>{
         setSize(getSize());
@@ -21,7 +20,7 @@ export default function ContextProvider({ children }) {
     });
 
     return (
-        <Context.Provider value={{ size, user, setUser, screen, setScreen }}>
+        <Context.Provider value={{ size, user, setUser }}>
             {children}
         </Context.Provider>
     );

@@ -1,10 +1,10 @@
 import React, {useEffect, useState, useRef} from 'react';
-import {db} from '../../base';
+import {db} from '../../../base';
 
 import './Groups.scss';
 
-import Loader from '../Loader/Loader';
-import ListItem from '../ListItem/ListItem';
+import Loader from '../../Loader/Loader';
+import ListItem from '../../ListItem/ListItem';
 
 export default function Groups() {
 

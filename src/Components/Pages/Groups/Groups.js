@@ -1,11 +1,12 @@
 import React, {useEffect, useState, useRef} from 'react';
+import {Link} from 'react-router-dom';
 import { useCollection } from 'react-firebase-hooks/firestore';
-import {db} from '../../base';
+import {db} from '../../../base';
 
 import './Groups.scss';
 
-import Loader from '../Loader/Loader';
-import ListItem from '../ListItem/ListItem';
+import Loader from '../../Loader/Loader';
+import ListItem from '../../ListItem/ListItem';
 
 export default function Groups() {
 
@@ -43,7 +44,11 @@ export default function Groups() {
                     <div className="groups-list" ref={refElem}>
                         {
                             posts?.map(doc =>{
-                                return (<ListItem key={doc.id} id={doc.id} data={doc.data()} />);
+                                return (
+                                    <Link key={doc.id} to={`/group/${doc.id}`}>
+                                        <ListItem id={doc.id} data={doc.data()} />
+                                    </Link>
+                                );
                             })
                         }
                     </div>
