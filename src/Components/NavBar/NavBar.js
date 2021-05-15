@@ -1,28 +1,20 @@
 import React, {useContext} from 'react';
-import firebase from 'firebase';
 
-import {db} from '../../base';
 import {Context} from '../../context';
 
 import './NavBar.scss';
 
 export default function NavBar() {
 
-    const {screen} = useContext(Context);
-
-    const addNewElement = () => {
-        let text = prompt("Укажите имя группы:");
-        if(text){
-            db.collection(screen).add({
-                name: text,
-                createAt: firebase.firestore.FieldValue.serverTimestamp()
-            })
-        }
-    }
+    const {showAdd, setShowAdd} = useContext(Context);
 
     return (
         <div className="navbar">
-            <div className="adding" onClick={addNewElement}>
+            <div
+                className="adding"
+                onClick={() => setShowAdd(true)}
+                disabled={showAdd}
+            >
                 <svg
                     version="1.1"
                     xmlns="http://www.w3.org/2000/svg"

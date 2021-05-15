@@ -1,9 +1,16 @@
-.App {
-    max-width: 992px;
-    width: 100%;
-    margin: 0 auto;
+.app {
     background: var(--blue);
-    min-height: 100vh;
     color: var(--text);
+    margin: 0 auto;
+    max-width: 992px;
+    min-height: 100vh;
     padding: var(--gap) 0 40px 0;
+    width: 100%;
+
+    &-show-modal {
+        height: 100vh;
+        overflow-y: hidden;
+        position: fixed;
+        width: 100%;
+    }
 }

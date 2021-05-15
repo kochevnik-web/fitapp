@@ -1,0 +1,16 @@
+.modal {
+    align-items: center;
+    background: var(--blueDarken);
+    border-top: 0.2em solid var(--blueLignt);
+    display: flex;
+    flex-direction: column;
+    font-size: 3.5em;
+    justify-content: center;
+    height: 100vh;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+    transform: translateY(100%) scaleX(1.2);
+}

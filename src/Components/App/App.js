@@ -7,24 +7,30 @@ import {Context} from '../../context';
 import Groups from '../Pages/Groups/Groups';
 import Group from '../Pages/SingleGroup/SingleGroup';
 import NavBar from '../NavBar/NavBar';
+import Modal from '../Modal/Modal';
 
 function App() {
 
     console.log(process.env.NODE_ENV);
 
-    const {size} = useContext(Context);
+    const {size, showAdd} = useContext(Context);
+
+    let cls = ['app'];
+
+    if(showAdd) cls.push('app-show-modal')
 
     return (
-        <div className="App" style={{fontSize: size}}>
-            <NavBar />
-            <Router>
-                <Switch>
-                    <Route exact path="/" component={Groups} />
-                    <Route path="/group/:id" component={Group} />
-                    <Route path="*" component={Groups} />
-                </Switch>
-            </Router>
-        </div>
+        <Router>
+            <div className={cls.join(' ')} style={{fontSize: size}}>
+                <NavBar />
+                    <Switch>
+                        <Route exact path="/" component={Groups} />
+                        <Route path="/group/:id" component={Group} />
+                        <Route path="*" component={Groups} />
+                    </Switch>
+                {showAdd && <Modal />}
+            </div>
+        </Router>
     );
 }
 
