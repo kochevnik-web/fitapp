@@ -6,11 +6,13 @@
     min-height: 100vh;
     padding: var(--gap) 0 40px 0;
     width: 100%;
+    overflow: hidden;
+    transform: translateZ(0);
 
     &-show-modal {
         height: 100vh;
         overflow-y: hidden;
-        position: fixed;
+        position: relative;
         width: 100%;
     }
 }

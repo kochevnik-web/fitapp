@@ -1,5 +1,8 @@
 import React, {useRef, useEffect, useContext, useState} from 'react';
 import gsap from 'gsap';
+import firebase from 'firebase';
+import {db} from '../../base';
+import {useHistory, useRouteMatch} from 'react-router-dom';
 
 import {Context} from '../../context';
 
@@ -10,8 +13,41 @@ export default function Modal() {
     const {setShowAdd} = useContext(Context);
 
     const [animation, setAnimation] = useState(false);
+    const [addName, setAddName] = useState('');
+
+    const {location} = useHistory();
+
+    let placeholder = '';
+    let path = '';
+
+    if(location.pathname.includes('/fitapp')){
+        placeholder = 'группы';
+        path = '/fitapp';
+    } else if (location.pathname.includes('/group/')) {
+        placeholder = 'упражнения';
+        path = '/group/:id';
+    }
+
+    const {params} = useRouteMatch(path);
 
     let elRef = useRef(null);
+
+    const addNewData = () => {
+        setAnimation(true);
+        if(addName) {
+            if(location.pathname.includes('/fitapp')){
+                db.collection('groups').add({
+                    name: addName,
+                    createAt: firebase.firestore.FieldValue.serverTimestamp()
+                });
+            } else if (location.pathname.includes('/group/')) {
+                db.collection('groups').doc(params?.id).collection('exercise').add({
+                    name: addName,
+                    createAt: firebase.firestore.FieldValue.serverTimestamp()
+                });
+            }
+        }
+    }
 
     useEffect(() => {
         gsap.to(elRef, {
@@ -41,12 +77,29 @@ export default function Modal() {
             }
         }
     // eslint-disable-next-line
-    }, [animation])
+    }, [animation]);
 
     return (
         <div className="modal" ref={el => (elRef = el)}>
-            <h1>MODAL</h1>
-            <button onClick={() => setAnimation(true)}>Click</button>
+            <div className="input-wrapp">
+                <input
+                    name="addedName"
+                    type="text"
+                    value={addName}
+                    className="added-name"
+                    placeholder={`Добавьте название ${placeholder}`}
+                    onChange={(e) => setAddName(e.target.value)}
+                />
+                <div className="input-line"></div>
+            </div>
+            <div className="buttons">
+                <div className="button" onClick={() => setAnimation(true)}>
+                    <span>Отменить</span>
+                </div>
+                <div className="button" onClick={addNewData}>
+                    <span>Добавить</span>
+                </div>
+            </div>
         </div>
     )
 }

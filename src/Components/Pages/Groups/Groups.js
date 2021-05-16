@@ -53,7 +53,11 @@ export default function Groups() {
                         }
                     </div>
                     {(!channels?.docs.length || channels?.docs.length < limit || loading) ? null : (
-                        <div className="groups-btn-more" onClick={() => setLastId(channels?.docs[channels?.docs.length - 1].data().createAt)}>
+                        <div
+                            className="button groups-btn-more"
+                            type="button"
+                            onClick={() => setLastId(channels?.docs[channels?.docs.length - 1].data().createAt)}
+                        >
                             <span>Загрузить еще</span>
                         </div>
                     )}
