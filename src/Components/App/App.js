@@ -20,7 +20,7 @@ function App() {
     if(showAdd) cls.push('app-show-modal')
 
     return (
-        <Router>
+        <Router basename="/fitapp">
             <div className={cls.join(' ')} style={{fontSize: size}}>
                 <NavBar />
                     <Switch>
