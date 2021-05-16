@@ -3,10 +3,15 @@ import gsap from 'gsap';
 import firebase from 'firebase';
 import {db} from '../../base';
 import {useHistory, useRouteMatch} from 'react-router-dom';
+import DatePicker, {registerLocale} from 'react-datepicker';
+import ru from 'date-fns/locale/ru';
 
 import {Context} from '../../context';
 
+import "react-datepicker/dist/react-datepicker.css";
 import './Modal.scss';
+
+registerLocale('ru', ru);
 
 export default function Modal() {
 
@@ -14,6 +19,7 @@ export default function Modal() {
 
     const [animation, setAnimation] = useState(false);
     const [addName, setAddName] = useState('');
+    const [startDate, setStartDate] = useState(new Date());
 
     const {location} = useHistory();
 
@@ -81,6 +87,15 @@ export default function Modal() {
 
     return (
         <div className="modal" ref={el => (elRef = el)}>
+            <div className="input-wrapp">
+                <DatePicker
+                    selected={startDate}
+                    onChange={date => setStartDate(date)}
+                    popperPlacement="bottom-center"
+                    locale="ru"
+                />
+                <div className="input-line"></div>
+            </div>
             <div className="input-wrapp">
                 <input
                     name="addedName"

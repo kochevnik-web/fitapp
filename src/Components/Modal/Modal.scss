@@ -65,4 +65,31 @@
             width: 100%;
         }
     }
+
+    .react-datepicker {
+        font-size: 1.3em;
+
+        &-wrapper {
+            width: 100%;
+
+            input {
+                width: 100%;
+            }
+        }
+
+        &-poper {
+            position: absolute;
+            will-change: transform;
+            top: 0px;
+            left: 50%;
+            transform: translate3d(-50%, 4.9em, 0px);
+        }
+
+        &__day-name,
+        &__day,
+        &__time-name {
+            width: 2.15em;
+            line-height: 2.15em;
+        }
+    }
 }
