@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/fitapp/static/css/main.15345741.chunk.css",
-    "main.js": "/fitapp/static/js/main.ebe5ce0f.chunk.js",
-    "main.js.map": "/fitapp/static/js/main.ebe5ce0f.chunk.js.map",
+    "main.js": "/fitapp/static/js/main.45e24e91.chunk.js",
+    "main.js.map": "/fitapp/static/js/main.45e24e91.chunk.js.map",
     "runtime-main.js": "/fitapp/static/js/runtime-main.a46c1b24.js",
     "runtime-main.js.map": "/fitapp/static/js/runtime-main.a46c1b24.js.map",
     "static/js/2.6f56906b.chunk.js": "/fitapp/static/js/2.6f56906b.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.a46c1b24.js",
     "static/js/2.6f56906b.chunk.js",
     "static/css/main.15345741.chunk.css",
-    "static/js/main.ebe5ce0f.chunk.js"
+    "static/js/main.45e24e91.chunk.js"
   ]
 }
